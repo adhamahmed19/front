@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elctronics Shop</title>
+    <link rel="shortcut icon" href="./Homeimage/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="home_page_body">
+    <header class="home_page_header">
+        <div class="home_page_container">
+            <div class="home_page_left">
+                <div class="home_page_menu_bar" onclick="toggleSidebar()">☰</div>
+                <div class="font_italic">
+                    <div class="home_page_logo_text"><b>Elctro shop</b></div>
+                </div>
+                <ul class="home_page_ul">
+                    <li class="home_page_li"><a class="home_page_li_link" href="#">Home</a>
+                    </li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="#products">Products</a>
+                    </li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="./html/About_us.html">About us</a></li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="./html/cart.html">Cart</a></li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="./html/contact_us.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <img src="./Homeimage/logo.jpg" class="home_page_li_icon" />
+        </div>
+    </header>
+    <div class="font_family">
+        <div id="sidebar" class="home_page_sidebar">
+            <ul class="sidebar_ul">
+                <li><a href="#">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="./html/contact_us.html">Contact Us</a></li>
+                <li><a href="./html/cart.html">Cart</a></li>
+                <li><a href="./html/About_us.html">About us</a></li>
+                <li><a href="./html/regist.html">Log In</a></li>
+            </ul>
+        </div>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="./Homeimage/home_image (2).jpg" alt="Image 1">
+                    <div class="slide-text">
+                        <h2>Welcome to store</h2>
+                        <p>ElCTRONICS STORE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="products">
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="Homeimage/product_image/1.jpg" alt="TDS Sensor with Board Module V1.0">
+                    <h4>TDS Sensor with Board Module V1.0</h4>
+                    <p><small><u>EGP</u></small>850</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('TDS Sensor with Board Module V1.0', 850, '/Homeimage/product_image/1.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/2.jpg" alt="4029 IC Up-Down Counter">
+                    <h4>4029 IC Up-Down Counter</h4>
+                    <p><small><u>EGP</u></small>35</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('4029 IC Up-Down Counter', 35, '/Homeimage/product_image/2.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/3.jpg" alt="Arduino Uno Rev3">
+                    <h4>Arduino Uno Rev3</h4>
+                    <p><small><u>EGP</u></small>425</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Arduino Uno Rev3', 425, '/Homeimage/product_image/3.jpg')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/4.jpg" alt="USB to Mini USB Cable 30cm For Arduino NANO">
+                    <h4>USB to Mini USB Cable 30cm For Arduino NANO</h4>
+                    <p><small><u>EGP</u></small>20</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('UUSB to Mini USB Cable 30cm For Arduino NANO', 20, '/Homeimage/product_image/4.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/5.jpg"
+                        alt="Arduino Pro Micro 5V/16MHz Atmega32U4 Board with Type-C USB">
+                    <h4>Arduino Pro Micro 5V/16MHz Atmega32U4 Board with Type-C USB</h4>
+                    <p><small><u>EGP</u></small>450</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Arduino Pro Micro 5V/16MHz Atmega32U4 Board with Type-C USB', 450, '/Homeimage/product_image/5.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/6.jpg"
+                        alt="STM32 NUCLEO-F767ZI Development Board with STM32F767ZIT6 ARM Cortex M7 MCU">
+                    <h4>STM32 NUCLEO-F767ZI Development Board with STM32F767ZIT6 ARM Cortex M7 MCU</h4>
+                    <p><small><u>EGP</u></small>4000</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('STM32 NUCLEO-F767ZI Development Board with STM32F767ZIT6 ARM Cortex M7 MCU', 4000, '/Homeimage/product_image/6.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/7.jpg"
+                        alt="Digilent Analog Discovery 2 100MS/s Signal Oscilloscope">
+                    <h4>Digilent Analog Discovery 2 100MS/s Signal Oscilloscope</h4>
+                    <p><small><u>EGP</u></small>30000</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Digilent Analog Discovery 2 100MS/s Signal Oscilloscope', 30000, '/Homeimage/product_image/7.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/8.jpg" alt="Breadboard 400 points">
+                    <h4>Breadboard 400 points</h4>
+                    <p><small><u>EGP</u></small>27</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Breadboard 400 points', 27, '/Homeimage/product_image/8.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/9.jpg" alt="Intel® RealSense™ Depth Camera D435i with IMU">
+                    <h4>Intel® RealSense™ Depth Camera D435i with IMU</h4>
+                    <p><small><u>EGP</u></small>40000</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Intel® RealSense™ Depth Camera D435i with IMU', 40000, '/Homeimage/product_image/9.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/10.jpg"
+                        alt="Micro SD 128GB With Adapter Loaded Raspbian OS for Raspberry PI 4">
+                    <h4>Micro SD 128GB With Adapter Loaded Raspbian OS for Raspberry PI 4</h4>
+                    <p><small><u>EGP</u></small>750</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Micro SD 128GB With Adapter Loaded Raspbian OS for Raspberry PI 4', 750, '/Homeimage/product_image/10.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/11.jpg" alt="DC Geared Motor 1:120 240 RPM Dual Axis">
+                    <h4>DC Geared Motor 1:120 240 RPM Dual Axis</h4>
+                    <p><small><u>EGP</u></small>40</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('DC Geared Motor 1:120 240 RPM Dual Axis', 40, '/Homeimage/product_image/11.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/12.jpg"
+                        alt="BC547 Bipolar Junction Transistor – BJT NPN 45V 100mA">
+                    <h4>BC547 Bipolar Junction Transistor – BJT NPN 45V 100mA</h4>
+                    <p><small><u>EGP</u></small>1</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('BC547 Bipolar Junction Transistor – BJT NPN 45V 100mA', 1, '/Homeimage/product_image/12.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/13.jpg" alt="TIP2955 Bipolar Transistor 60V 15A 90W TO-247AC-3">
+                    <h4>TIP2955 Bipolar Transistor 60V 15A 90W TO-247AC-3</h4>
+                    <p><small><u>EGP</u></small>25</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('TIP2955 Bipolar Transistor 60V 15A 90W TO-247AC-3', 25, '/Homeimage/product_image/13.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/14.jpg"
+                        alt="ESC Speed Controller for Brushless Motor 30A with T-Type Connector + Motor Connectors">
+                    <h4>ESC Speed Controller for Brushless Motor 30A with T-Type Connector + Motor Connectors</h4>
+                    <p><small><u>EGP</u></small>475</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('ESC Speed Controller for Brushless Motor 30A with T-Type Connector + Motor Connectors', 475, '/Homeimage/product_image/14.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/15.jpg" alt="Crystal 12.000MHz 49S 20PPM 20pF 40Ω">
+                    <h4>Crystal 12.000MHz 49S 20PPM 20pF 40Ω</h4>
+                    <p><small><u>EGP</u></small>3</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Crystal 12.000MHz 49S 20PPM 20pF 40Ω', 3, '/Homeimage/product_image/15.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/16.jpg" alt="Diac DB3">
+                    <h4>Diac DB3</h4>
+                    <p><small><u>EGP</u></small>1.50</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Diac DB3', 1.50, '/Homeimage/product_image/16.jpg')">Buy Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/17.jpg"
+                        alt="Heat Shrink Tubing 20cm 2:1 Mixed Sizes and Colours (Pack of 100)">
+                    <h4>Heat Shrink Tubing 20cm 2:1 Mixed Sizes and Colours (Pack of 100)</h4>
+                    <p><small><u>EGP</u></small>150</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Heat Shrink Tubing 20cm 2:1 Mixed Sizes and Colours (Pack of 100)', 150, '/Homeimage/product_image/17.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/18.jpg" alt="Heat Shrink 2mm 1M – Black">
+                    <h4>Heat Shrink 2mm 1M – Black</h4>
+                    <p><small><u>EGP</u></small>3.50</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Heat Shrink 2mm 1M – Black', 3.50, '/Homeimage/product_image/18.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/19.jpg" alt="Heat Shrink 4mm 1M">
+                    <h4>Heat Shrink 4mm 1M</h4>
+                    <p><small><u>EGP</u></small>5</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Heat Shrink 4mm 1M', 5, '/Homeimage/product_image/19.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/20.jpg" alt="Pneumatic Fitting PC4-02">
+                    <h4>Pneumatic Fitting PC4-02</h4>
+                    <p><small><u>EGP</u></small>15</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Pneumatic Fitting PC4-02', 15, '/Homeimage/product_image/20.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/21.jpg" alt="IC Socket (8+8) Base 16 Pin">
+                    <h4>IC Socket (8+8) Base 16 Pin</h4>
+                    <p><small><u>EGP</u></small>1.75</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('IC Socket (8+8) Base 16 Pin', 1.75, '/Homeimage/product_image/21.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/22.jpg" alt="Pneumatic Fitting PG6-4">
+                    <h4>Pneumatic Fitting PG6-4</h4>
+                    <p><small><u>EGP</u></small>15</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Pneumatic Fitting PG6-4', 15, '/Homeimage/product_image/22.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/23.jpg"
+                        alt="Pressure Plastic Electric Water Solenoid Valve 12V 1/2″ Normally Closed">
+                    <h4>Pressure Plastic Electric Water Solenoid Valve 12V 1/2″ Normally Closed</h4>
+                    <p><small><u>EGP</u></small>220</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Pressure Plastic Electric Water Solenoid Valve 12V 1/2″ Normally Closed', 220, '/Homeimage/product_image/23.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/24.jpg" alt="Power Inductor 2mH 4 Pin 20x15mm (E Core Shape)">
+                    <h4>Power Inductor 2mH 4 Pin 20x15mm (E Core Shape)</h4>
+                    <p><small><u>EGP</u></small>7.50</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Power Inductor 2mH 4 Pin 20x15mm (E Core Shape)', 7.50, '/Homeimage/product_image/24.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/25.jpg" alt="Inductor 330uH 0510 1W">
+                    <h4>Inductor 330uH 0510 1W</h4>
+                    <p><small><u>EGP</u></small>1</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Inductor 330uH 0510 1W', 1, '/Homeimage/product_image/25.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/27.jpg" alt="2WD Smart Robot Car Chassis Kit">
+                    <h4>2WD Smart Robot Car Chassis Kit</h4>
+                    <p><small><u>EGP</u></small>215</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('2WD Smart Robot Car Chassis Kit', 215, '/Homeimage/product_image/27.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/28.jpg"
+                        alt="Metal Platform with 4 DC Geared Motor & 4 Omni Wheel">
+                    <h4>Metal Platform with 4 DC Geared Motor & 4 Omni Wheel</h4>
+                    <p><small><u>EGP</u></small>800</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Metal Platform with 4 DC Geared Motor & 4 Omni Wheel', 800, '/Homeimage/product_image/28.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/29.jpg"
+                        alt="JGA25-370 DC Motor With Gear Box 12V 400 rpm 5.6Kg.cm">
+                    <h4>JGA25-370 DC Motor With Gear Box 12V 400 rpm 5.6Kg.cm</h4>
+                    <p><small><u>EGP</u></small>350</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('JGA25-370 DC Motor With Gear Box 12V 400 rpm 5.6Kg.cm', 350, '/Homeimage/product_image/29.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/30.jpg" alt="DC Multifunction Tester Energy Meter KWS-DC200-100A">
+                    <h4>DC Multifunction Tester Energy Meter KWS-DC200-100A</h4>
+                    <p><small><u>EGP</u></small>950</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('DC Multifunction Tester Energy Meter KWS-DC200-100A', 950, '/Homeimage/product_image/30.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/31.jpg"
+                        alt="ER14505 Westinghouse AA Lithium Battery 3.6V 2700mAh">
+                    <h4>ER14505 Westinghouse AA Lithium Battery 3.6V 2700mAh</h4>
+                    <p><small><u>EGP</u></small>150</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('ER14505 Westinghouse AA Lithium Battery 3.6V 2700mAh', 150, '/Homeimage/product_image/31.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/32.jpg" alt="Arduino PORTENTA H7 ABX00042">
+                    <h4>Arduino PORTENTA H7 ABX00042</h4>
+                    <p><small><u>EGP</u></small>2850</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Arduino PORTENTA H7 ABX00042', 2850, '/Homeimage/product_image/32.jpg')">Buy
+                        Now</button>
+                </div>
+                <div class="product-item">
+                    <img src="Homeimage/product_image/33.jpg"
+                        alt="Soldering Iron KX-80R Equivalent 80W original – Goot">
+                    <h4>Soldering Iron KX-80R Equivalent 80W original – Goot</h4>
+                    <p><small><u>EGP</u></small>750</p>
+                    <button class="btn-buy"
+                        onclick="buyProduct('Soldering Iron KX-80R Equivalent 80W original – Goot', 750, '/Homeimage/product_image/33.jpg')">Buy
+                        Now</button>
+                </div>
+
+        </section>
+    </div>
+    <footer class="home_page_first_footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3> Contact Us</h3>
+                <ul>
+                    <li><a href="./html/contact_us.html">Customer Service</a></li>
+                    <li><a href="./html/contact_us.html">Comments</a></li>
+                    <li><a href="#">Shopping & Delivery</a></li>
+                    <li><a href="#">Technical Support</a></li>
+                    <li><a href="#">Warranty Info</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Shop / Products</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Deals & Promotions</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i>Categories</h3>
+                <ul>
+                    <li><a href="#products">Microcontrollers</a></li>
+                    <li><a href="#products">Sensors</a></li>
+                    <li><a href="#products">DC Motor</a></li>
+                    <li><a href="#products">Tools & Soldering Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="./Java/scripts.js"></script>
+</body>
+</html>

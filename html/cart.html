@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../Java/scripts.js"></script>
+    <link rel="shortcut icon" href="../Homeimage/logo.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="home_page_header">
+        <div class="home_page_container">
+            <div class="home_page_left">
+                <div class="home_page_menu_bar" onclick="toggleSidebar()">☰</div>
+                <div class="font_italic">
+                    <div class="home_page_logo_text"><b>Elctro shop</b></div>
+                </div>
+                <ul class="home_page_ul">
+                    <li class="home_page_li"><a class="home_page_li_link" href="../index.html">Home</a></li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="../index.html#products">Products</a></li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="../html/About_us.html">About us</a></li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="#">Cart</a></li>
+                    <li class="home_page_li"><a class="home_page_li_link" href="../html/contact_us.html">Contact us</a></li>
+                </ul>
+            </div>
+            <img src="../Homeimage/logo.jpg" class="home_page_li_icon" />
+        </div>
+        <div class="font_family">
+            <div id="sidebar" class="home_page_sidebar">
+                <ul class="sidebar_ul">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../html/contact_us.html">Contact Us</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="../html/About_us.html">About us</a></li>
+                    <li><a href="../html/regist.html">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Complete The request</h1>
+
+        <div class="progress-bar">
+            <div class="step active" data-step="cart" onclick="showSection('cart')">Cart</div>
+            <div class="step" data-step="shipping" onclick="showSection('shipping')">Shopping</div>
+            <div class="step" data-step="payment" onclick="showSection('payment')">pay</div>
+            <div class="step" data-step="confirmation" onclick="showSection('confirmation')">Check</div>
+        </div>
+
+        <div id="cart" class="section active">
+            <h2>Details</h2>
+            <img id="checkout-image" src="" alt="Product Image">
+            <h3 id="checkout-name"></h3>
+            <h3 id="checkout-price"></h3>
+            <button class="next-btn" onclick="showSection('shipping')">Track Shopping</button>
+        </div>
+
+        <div id="shipping" class="section">
+            <h2>Shopping information</h2>
+            <input type="text" placeholder="Enter name" required><br>
+            <input type="text" placeholder="address" required><br>
+            <input type="text" placeholder="phone number" required><br>
+            <button class="next-btn" onclick="showSection('payment')">payment</button>
+        </div>
+
+        <div id="payment" class="section">
+            <h3>Payment information</h3>
+            <input type="text" placeholder="Card number" required><br>
+            <input type="text" placeholder="Expiration date" required><br>
+            <input type="text" placeholder="CVV" required>
+            <button class="next-btn" onclick="showSection('confirmation')">Complete the request</button>
+        </div>
+
+        <div id="confirmation" class="section">
+            <h1>Successful✅</h1>
+            <p><h2>Thank you for your order</h2></p><br>
+            <h3>We will contact you soon.</h3>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Update progress bar steps
+            document.querySelectorAll('.step').forEach(step => {
+                step.classList.remove('active');
+                if (step.getAttribute('data-step') === sectionId) {
+                    step.classList.add('active');
+                }
+            });
+        }
+
+        // Load product details from localStorage
+        const productName = localStorage.getItem('productName');
+        const productPrice = localStorage.getItem('productPrice');
+        const productImage = localStorage.getItem('productImage');
+
+        if (productImage) {
+            document.getElementById('checkout-image').src = productImage;
+        } else {
+            console.error('Product image not found in localStorage.');
+        }
+
+        if (productName) {
+            document.getElementById('checkout-name').innerText = productName;
+        }
+
+        if (productPrice) {
+            document.getElementById('checkout-price').innerText = 'EGP ' + productPrice;
+        }
+    </script>
+
+    <script src="../Java/scripts.js"></script>
+</body>
+</html>
